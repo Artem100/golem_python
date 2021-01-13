@@ -16,7 +16,7 @@ def test(data):
     send_keys(('id', 'searchInput'), 'automation')
     click(('id', 'searchButton'))
     verify_element_text(('id', 'firstHeading'), 'Automation')
-    pass
+    pass #
 
 
 def teardown(data):
