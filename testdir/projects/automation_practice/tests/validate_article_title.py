@@ -1,22 +1,23 @@
 from golem.actions import navigate, send_keys, click, verify_element_text
 
+from testdir.projects.automation_practice.pages import header, article
+
 description = 'Search an article in Wikipedia'
 
 tags = []
 
-pages = []
+pages = ['header', 'article']
 
 
 def setup(data):
     pass
 
-
 def test(data):
-    navigate('http://en.wikipedia.org/')
-    send_keys(('id', 'searchInput'), data.search_value)
-    click(('id', 'searchButton'))
-    verify_element_text(('id', 'firstHeading'), data.article_title)
-    pass #
+    navigate(data.URL)
+    send_keys(header.search_input, data.search_value)
+    click(header.search_button)
+    verify_element_text(article.title, data.article_title)
+
 
 
 def teardown(data):
