@@ -1,7 +1,3 @@
-from golem.actions import navigate, send_keys, click, verify_element_text
-
-from testdir.projects.automation_practice.pages import header, article
-
 description = 'Search an article in Wikipedia'
 
 tags = []
