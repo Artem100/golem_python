@@ -1,6 +1,6 @@
 from golem.actions import navigate, send_keys, click, verify_element_text
 
-description = ''
+description = 'Search an article in Wikipedia'
 
 tags = []
 
@@ -13,9 +13,9 @@ def setup(data):
 
 def test(data):
     navigate('http://en.wikipedia.org/')
-    send_keys(('id', 'searchInput'), 'automation')
+    send_keys(('id', 'searchInput'), data.search_value)
     click(('id', 'searchButton'))
-    verify_element_text(('id', 'firstHeading'), 'Automation')
+    verify_element_text(('id', 'firstHeading'), data.article_title)
     pass #
 
 
