@@ -1,3 +1,5 @@
+from golem.actions import navigate, send_keys, click, verify_element_text
+
 description = 'Search an article in Wikipedia'
 
 tags = []
