@@ -1,1 +1,1 @@
-golem-framework == 0.9.1
+golem-framework == 0.10.1
