@@ -1,1 +1,11 @@
-{}
+{
+  "QA": {
+      "name": "QA",
+      "url": "http://en.wikipedia.org/"
+    },
+
+  "Stage": {
+        "name": "Stage",
+        "url": "http://fr.wikipedia.org/"
+    }
+}

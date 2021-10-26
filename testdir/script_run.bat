@@ -1,0 +1,1 @@
+cd path\to\project && git pull && golem run automation_practice full_run -e QA

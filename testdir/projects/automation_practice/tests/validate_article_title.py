@@ -1,4 +1,6 @@
-from golem.actions import navigate, send_keys, click, verify_element_text
+from golem.actions import navigate, send_keys, click, verify_element_text, wait
+
+from pages import header, article
 
 description = 'Search an article in Wikipedia'
 
@@ -11,10 +13,13 @@ def setup(data):
     pass
 
 def test(data):
-    navigate(data.URL)
-    send_keys(header.search_input, data.search_value)
-    click(header.search_button)
-    verify_element_text(article.title, data.article_title)
+    navigate(data.env.url)
+    wait(2)
+    header.search_article_field_input(data.search_value)
+    wait(2)
+    # article.Locator.title_check(data.article_title)
+    verify_element_text(article.Locator().title, data.article_title)
+    pass
 
 
 
