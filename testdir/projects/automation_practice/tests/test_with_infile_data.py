@@ -27,3 +27,4 @@ data = [
 def test(data):
     navigate('https://www.google.com')
     send_keys(('name', 'q'), data.str_single)
+    #
